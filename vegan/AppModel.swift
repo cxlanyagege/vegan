@@ -11,6 +11,7 @@ import SwiftUI
 @MainActor
 @Observable
 class AppModel {
+    let mainWindowID = "MainWindow"
     let immersiveSpaceID = "ImmersiveSpace"
     enum ImmersiveSpaceState {
         case closed

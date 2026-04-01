@@ -6,20 +6,23 @@
 //
 
 import SwiftUI
-import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
 
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
+        VStack(spacing: 0) {
+            VStack {
+                Text("Welcome to codename vegan")
+                    .font(.system(size: 44, weight: .semibold))
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 
-            Text("Hello, world!")
-
-            ToggleImmersiveSpaceButton()
+            VStack {
+                ToggleImmersiveSpaceButton()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
     }
 }

@@ -13,7 +13,7 @@ struct veganApp: App {
     @State private var appModel = AppModel()
 
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: appModel.mainWindowID) {
             ContentView()
                 .environment(appModel)
         }
